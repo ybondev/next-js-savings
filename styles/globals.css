@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Saira:wght@400;500;700&display=swap%27");
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-bg: #151515;
+    --secondary-bg: #f5f5f5;
+    --text-color: #f5f5f5;
+    --accent-color: #519872;
+}
+
+.body {
+    background: var(--secondary-bg);
+}
+
+/* PRESET */
+section {
+    padding: 100px 0;
+}
+
+.header {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+input.form-control {
+    border-radius: 0;
+}
+
+input.form-control:focus {
+    box-shadow: none;
+}
+
+/* LOGIN */
+.login_section {
+    padding: 0;
+    color: var(--primary-bg);
+}
+
+.login_section .row {
+    align-items: center;
+    justify-content: center;
+    height: 100dvh;
+}
+
+.login_section .row .col-md-6 {
+    width: 100%;
+    max-width: 30%;
+}
+
+.login_section .header {
+    text-align: center;
+}
+
+.login_section .show_password_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.login_section .show_password_container input {
+    margin-top: -.7rem;
+}
+
+.login_section .show_password_container p {
+    text-transform: capitalize;
+    margin-left: .3rem;
+}
+
+.login_section .btn_login_container button {
+    width: 100%;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 0;
+    background: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    transition: all .3s;
+}
+
+.login_section .btn_login_container button:hover {
+    background: #213d2e;
+}
