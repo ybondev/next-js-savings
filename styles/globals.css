@@ -65,6 +65,7 @@ input.form-control:focus {
 
 .login_section .show_password_container input {
     margin-top: -.7rem;
+    cursor: pointer;
 }
 
 .login_section .show_password_container p {

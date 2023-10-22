@@ -6,6 +6,7 @@ import { useState } from 'react'
 const Login = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
+    const [showPassword, setShowPassword] = useState(false)
 
     const handleSubmit = () => {
         if(login(username, password)) {
@@ -14,13 +15,17 @@ const Login = () => {
             alert('error')
         }
     }
+
+    const handlePassword = () => {
+        setShowPassword(!showPassword)
+    }
   return (
     <>
     <section className="container-fluid login_section">
         <div className="container">
             <div className="row">
                 <div className="col-md-6">
-                    <form action="">
+                    <form action="" onSubmit={handleSubmit}>
                         <div className="header">
                             MySavings
                         </div>
@@ -28,14 +33,14 @@ const Login = () => {
                             <input type="text" name="" id="" value={username} onChange={(e) => setUsername(e.target.value)} className="form-control" placeholder='Username' required/>
                         </div>
                         <div className="mt-3">
-                            <input type="password" name="" id="" value={password} onChange={(e) => setPassword(e.target.value)} className="form-control" placeholder='Password' required/>
+                            <input type={showPassword ? 'text' : 'password'} name="" id="" value={password} onChange={(e) => setPassword(e.target.value)} className="form-control" placeholder='Password' required/>
                         </div>
                         <div className="mt-3 show_password_container">
-                            <input type="checkbox" name="" id="" />
+                            <input type="checkbox" name="" id="" onClick={handlePassword}/>
                             <p>show password</p>
                         </div>
                         <div className="mt-3 btn_login_container">
-                            <button className="login" onClick={handleSubmit}>
+                            <button className="login" >
                                 login
                             </button>
                         </div>
