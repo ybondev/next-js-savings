@@ -12,7 +12,6 @@ const layout = ({children}) => {
   return (
     <html lang='en'>
         <body className='body'>
-            <Login />
             {children}
         </body>
     </html>

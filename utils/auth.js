@@ -9,5 +9,5 @@ export const login = (username, password) => {
 }
 
 export const isLoggedIn = () => {
-    return !!localStorage.getItem('username')
+    return true
 }

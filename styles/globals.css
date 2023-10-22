@@ -50,7 +50,6 @@ input.form-control:focus {
 
 .login_section .row .col-md-6 {
     width: 100%;
-    max-width: 30%;
 }
 
 .login_section .header {
@@ -86,4 +85,11 @@ input.form-control:focus {
 
 .login_section .btn_login_container button:hover {
     background: #213d2e;
+}
+
+@media screen and (min-width: 768px) {
+    .login_section .row .col-md-6 {
+        width: 100%;
+        max-width: 30%;
+    }
 }

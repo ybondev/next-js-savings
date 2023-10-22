@@ -2,15 +2,18 @@
 import Image from 'next/image'
 import {login} from '@utils/auth'
 import { useState } from 'react'
+import { useRouter } from 'next/navigation'
 
 const Login = () => {
     const [username, setUsername] = useState('')
     const [password, setPassword] = useState('')
     const [showPassword, setShowPassword] = useState(false)
+    const router = useRouter()
 
     const handleSubmit = () => {
         if(login(username, password)) {
             alert('success')
+            router.push('/home')
         } else {
             alert('error')
         }
@@ -25,7 +28,7 @@ const Login = () => {
         <div className="container">
             <div className="row">
                 <div className="col-md-6">
-                    <form action="" onSubmit={handleSubmit}>
+                    <form action="">
                         <div className="header">
                             MySavings
                         </div>
@@ -40,7 +43,7 @@ const Login = () => {
                             <p>show password</p>
                         </div>
                         <div className="mt-3 btn_login_container">
-                            <button className="login" >
+                            <button className="login" onSubmit={handleSubmit}>
                                 login
                             </button>
                         </div>
